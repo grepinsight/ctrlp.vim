@@ -93,6 +93,8 @@ let s:types = {
 	\ }
 
 cal map(s:types, 'printf(v:val, "--language-force=", " --", "-types=")')
+let s:types["vimwiki"] =""
+let s:types["markdown"] =""
 
 if executable('jsctags')
 	cal extend(s:types, { 'javascript': { 'args': '-f -', 'bin': 'jsctags' } })
